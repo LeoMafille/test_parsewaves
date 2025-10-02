@@ -12,6 +12,6 @@ class WallFragment extends Model
     protected $guarded = [];
 
     public function material() {
-        return $this->hasOne(Material::class);
+        return $this->belongsTo(Material::class);
     }
 }
