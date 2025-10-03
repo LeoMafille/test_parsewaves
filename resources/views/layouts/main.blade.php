@@ -17,7 +17,19 @@
             </div>
         </div>
         <div class="grow">
-            <div class="h-28 bg-slate-50"></div>
+            <div class="h-28 bg-slate-50">
+                <div class="text-right">
+                    Connecté en tant que {{ Auth::user()->name }}
+                </div>
+
+                <div class="text-right">
+                    <form action="/logout" method="post">
+                        @csrf
+                        <button type="submit" class="p-2 bg-red-500">Déconnexion</button>
+                    </form>
+                </div>
+
+            </div>
             <div class="h-4 bg-red-400"></div>
 
             <div class="p-4">
