@@ -21,5 +21,11 @@ class DatabaseSeeder extends Seeder
         ConstructionSite::factory(10)->create();
         Measure::factory(50)->create();
         WallFragment::factory(100)->create();
+
+        User::create([
+            'name' => 'TestUser',
+            'email' => 'test@test.test',
+            'password' => bcrypt('test')
+        ]);
     }
 }

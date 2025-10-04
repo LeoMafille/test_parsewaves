@@ -4,7 +4,7 @@
     <div class="flex flex-1">
         <div class="w-64 bg-slate-50 relative">
             <div class="absolute">
-                <img class="scale-110 ml-16 mt-10" src="{{ asset('images/izFYhZoABtG6SWF4Y5zFUtKHck.webp') }}" alt="Parsewaves Logo">
+                <img class="ml-6 mt-6" src="{{ asset('images/izFYhZoABtG6SWF4Y5zFUtKHck.webp') }}" alt="Parsewaves Logo">
             </div>
             
             <div class="mt-56 pl-4 ">
@@ -17,7 +17,7 @@
             </div>
         </div>
         <div class="grow">
-            <div class="h-28 bg-slate-50">
+            <div class="h-20 bg-slate-50">
                 <div class="text-right">
                     Connecté en tant que {{ Auth::user()->name }}
                 </div>
