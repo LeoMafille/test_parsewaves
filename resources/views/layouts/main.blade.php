@@ -16,18 +16,37 @@
                 <x-sidebar-link href="/chantiers">Chantiers</x-sidebar-link>
             </div>
         </div>
-        <div class="grow">
-            <div class="h-20 bg-slate-50">
-                <div class="text-right">
-                    Connecté en tant que {{ Auth::user()->name }}
-                </div>
-
-                <div class="text-right">
-                    <form action="/logout" method="post">
-                        @csrf
-                        <button type="submit" class="p-2 bg-red-500">Déconnexion</button>
-                    </form>
-                </div>
+        <div class="grow text-gray-500">
+            <div class="h-20 bg-slate-50 flex">
+                <span class="h-full flex ml-auto relative">
+                    <div class="absolute top-0 w-full min-h-20 opacity-0 hover:opacity-100 p-2">
+                        <div class="bg-slate-200 p-2 text-center">
+                            <form action="/logout" method="post">
+                                @csrf
+                                <button type="submit" class="rounded-full bg-red-500 hover:bg-red-300 text-white font-bold py-2 px-4">Déconnexion</button>
+                            </form>
+                        </div>
+                    </div>
+                    
+                    <div class="flex p-2 space-x-2">
+                        <img src="{{ asset('images/logo_small.png') }}" class="m-1" alt="">
+                        
+                        <div class="text-center flex place-items-center">
+                            <div class="block">
+                                <div class="font-bold">
+                                    {{ Auth::user()->name }}
+                                </div>
+                                <div class="text-sm">
+                                    {{ Auth::user()->role->name }}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex place-items-center">
+                            <x-dropdown-icon/>
+                        </div>
+                    </div>
+                    
+                </span>
 
             </div>
             <div class="h-4 bg-red-400"></div>

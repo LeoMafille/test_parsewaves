@@ -1,0 +1,1 @@
+<svg width="32px" height="32px" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#000000"><polyline points="24 28 32 36 40 28"/><circle cx="32" cy="32" r="24"/></svg>
