@@ -83,8 +83,7 @@
 
         <div class="flex flex-col flex-1">
             <div class="h-4 bg-red-400"></div>
-
-            <div class="p-4">
+            <div class="flex-1 p-4">
                 @yield('content')
             </div>
         </div>
