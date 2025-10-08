@@ -20,7 +20,7 @@ class MaterialFactory extends Factory
             'name' =>       fake()->word(),
             'flammable' =>  fake()->boolean(),
             'comment' =>    fake()->text(),
-            'type' =>       fake()->randomDigit() % 3
+            'type' =>       fake()->randomDigit() % 13
         ];
     }
 }
