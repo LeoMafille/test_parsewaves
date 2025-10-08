@@ -22,7 +22,8 @@
     $hatch = [
         asset("". $url ."materials1.png"),
         asset("". $url ."materials2.png"),
-        asset("". $url ."materials3.png")];
+        asset("". $url ."materials3.png")
+    ];
     
     $sumSize = 0;
     $legend = array();
@@ -40,7 +41,7 @@
 @foreach($wallFragments as $wallFragment)
     @php
 
-        $chosen_hatch = $hatch[$wallFragment->material->type];
+        $chosen_hatch = $hatch[$wallFragment->material->type % 3];
         $chosen_color = $colors[array_rand($colors)];
         $legend[$wallFragment->id] = $chosen_color;
         $key = array_search($chosen_color,$colors);
@@ -60,12 +61,34 @@
 </div>
 
 <div class='flex flex-wrap gap-2 p-4 mt-5 min-h-1/5  mx-auto border-2 border-black '>
-@foreach($wallFragments as $wallFragment)
-    <div class="flex items-center gap-2">
-        <div class="size-12  bg-[url({{$hatch[$wallFragment->material->type]}})] bg-{{$legend[$wallFragment->id]}} bg-[length:100%_100%] "></div>
-        <p>Materiaux: {{$wallFragment->material->name}} : | Profondeur : {{$wallFragment->width}} cm | Informations : {{$wallFragment->material->comment}}</p>
-    </div>
-@endforeach
+    <table>
+        <thead>
+            <th>Couleur</th>
+            <th>Matériau</th>
+            <th>Épaisseur (cm)</th>
+            <th>Informations</th>
+        </thead>
+        @foreach($wallFragments as $wallFragment)
+        <tr class="divide-x">
+            <td>
+                <div class="size-12 bg-[url({{$hatch[$wallFragment->material->type % 3]}})] bg-{{$legend[$wallFragment->id]}} bg-[length:100%_100%]"></div>
+            </td>
+            <td>
+                {{ $wallFragment->material->name }}
+            </td>
+            <td>
+                {{ round($wallFragment->width, 2) }}
+            </td>
+            <td>
+                {{ $wallFragment->material->comment }}
+            </td>
+        </tr>
+            {{-- <div class="flex items-center gap-2">
+                <div class="size-12  bg-[url({{$hatch[$wallFragment->material->type % 3]}})] bg-{{$legend[$wallFragment->id]}} bg-[length:100%_100%] "></div>
+                <p>Materiaux: {{$wallFragment->material->name}} : | Profondeur : {{$wallFragment->width}} cm | Informations : {{$wallFragment->material->comment}}</p>
+            </div> --}}
+        @endforeach
+    </table>
 </div>
 
 <script>
