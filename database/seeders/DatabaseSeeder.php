@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Company;
 use App\Models\ConstructionSite;
 use App\Models\Material;
 use App\Models\Measure;
@@ -19,6 +20,7 @@ class DatabaseSeeder extends Seeder
     {
         $this->call(RolesSeeder::class);
 
+        Company::factory(20)->create();
         Material::factory(100)->create();
         ConstructionSite::factory(10)->create();
         Measure::factory(50)->create();
