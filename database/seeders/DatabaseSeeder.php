@@ -19,7 +19,7 @@ class DatabaseSeeder extends Seeder
     {
         $this->call(RolesSeeder::class);
 
-        Material::factory(10)->create();
+        Material::factory(100)->create();
         ConstructionSite::factory(10)->create();
         Measure::factory(50)->create();
         WallFragment::factory(100)->create();
