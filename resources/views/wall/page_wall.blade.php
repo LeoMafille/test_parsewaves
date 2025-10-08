@@ -5,8 +5,18 @@
 @php 
    
     $wallFragments = $currentMeasure->wall_parts;
-    $nbFragments = sizeof($wallFragments);
-    $colors = ['red-300', 'blue-300', 'yellow-300', 'purple-300','emerald-300'];
+    $colors = [
+        'red-300', 
+        'orange-300',
+        'yellow-300',
+        'lime-300',
+        'indigo-300', 
+        'violet-300', 
+        'blue-300', 
+        'purple-300',
+        'emerald-300',
+        'gray-300'
+    ];
 
      $url = 'images/wall_pictures/';
     $hatch = [
