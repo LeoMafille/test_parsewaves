@@ -22,7 +22,7 @@
         @endif
     </head>
     <body class="flex flex-col min-h-screen bg-red-500 text-center p-2">
-        <div class="w-full md:w-1/2 xl:w-2/3 2xl:w-1/3 bg-white m-auto rounded-2xl">
+        <div class="w-full md:w-1/2 xl:w-2/3 2xl:w-1/3 bg-white m-auto rounded-2xl all">
             <div class="p-4 xl:p-32 space-y-8">
                 <img src="{{ asset('images/404.png') }}" alt="">
                 <div class="text-red-700 text-8xl font-bold">
