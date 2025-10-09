@@ -4,6 +4,7 @@ use App\Http\Controllers\ProfileController;
 use App\Models\ConstructionSite;
 use App\Models\Measure;
 use Illuminate\Support\Facades\Route;
+use App\Models\User;
 
 Route::middleware('auth')->group(function () {
     Route::get('/', function () {
@@ -16,6 +17,12 @@ Route::middleware('auth')->group(function () {
 
     Route::get('/logs', function() {
         return view('logs.index');
+    });
+
+    Route::get('/user/{name}', function($name) {
+        return view('user', [
+            'user' =>  User::find($name),            
+        ]);
     });
 
     Route::get('/outils', function() {

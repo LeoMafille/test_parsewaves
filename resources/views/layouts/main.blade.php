@@ -7,13 +7,21 @@
         </div>
 
         <span class="h-full flex ml-auto relative text-gray-500">
+
             <div class="absolute top-0 w-full min-h-20 opacity-0 hover:opacity-100 p-2">
-                <div class="bg-slate-200 p-2 text-center">
-                    <form action="/logout" method="post">
-                        @csrf
-                        <button type="submit" class="rounded-full bg-red-500 hover:bg-red-300 text-white font-bold py-2 px-4">Déconnexion</button>
-                    </form>
-                </div>
+                <ul class="mt-20">
+                    <li class="p-2 text-center">
+                        <a class="rounded-full bg-red-500 hover:bg-red-300 text-white font-bold py-2 px-4" href="/user/{{ Auth::user()->name }}">Accéder à mon profil</a>
+                    </li>
+                    <li class="p-2 text-center">
+                        <div>
+                            <form action="/logout" method="post">
+                                @csrf
+                                <button type="submit" class="rounded-full bg-red-500 hover:bg-red-300 text-white font-bold py-2 px-4">Déconnexion</button>
+                            </form>
+                        </div>
+                    </li>
+                </ul>
             </div>
             
             <div class="flex p-2 space-x-2">
