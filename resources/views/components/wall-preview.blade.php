@@ -36,7 +36,6 @@
     
     @foreach($wallFragments as $wallFragment)
         @php
-
             $chosen_hatch = $hatch[$wallFragment->material->type];
             $chosen_color = $colors[array_rand($colors)];
             $legend[$wallFragment->id] = $chosen_color;
