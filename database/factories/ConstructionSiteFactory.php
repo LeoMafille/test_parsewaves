@@ -17,6 +17,8 @@ class ConstructionSiteFactory extends Factory
     public function definition(): array
     {
         return [
+            "adresse"=> fake()->text(),
+            "date"=>    fake()->dateTime(),
             //
         ];
     }

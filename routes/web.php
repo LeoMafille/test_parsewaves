@@ -26,24 +26,25 @@ Route::middleware('auth')->group(function () {
         return (view('login'));
     });
 
-    Route::get('/chantiers', function() {
-        return view('wall.chantier', [
-            'chantiers' => ConstructionSite::all(),
+    Route::get('random_user/chantiers', function() {
+        return view('wall.construction_site_resume', [
+            'chantiers' => ConstructionSite::paginate(100),//genere tout les chantiers mets les 'compiles' par paquet de 5 
+            
         ]);
     });
 
-    Route::get('/chantiers/{id_site}', function($id_site) {
+    Route::get('random_user/chantiers/{id_site}', function($id_site) {
         return view('wall.mesure', [
             'chantiers' => ConstructionSite::all(),
             'currentChantier' => ConstructionSite::find($id_site),
         ]);
     });
 
-    Route::get('/chantiers/{id_site}/{id_measure}', function($id_site,$id_measure) {
+    Route::get('random_user/chantiers/{id_site}/{id_measure}', function($id_site,$id_measure) {
         return view('wall.page_wall', [
             'chantiers' => ConstructionSite::all(),
             'currentChantier' => ConstructionSite::find($id_site),
-            'currentMeasure' => Measure::find($id_measure),
+            'currentMeasure' => Measure::find($id_measure), 
             
         ]);
     });

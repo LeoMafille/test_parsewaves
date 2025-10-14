@@ -14,6 +14,9 @@ return new class extends Migration
         Schema::create('construction_sites', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
+            $table->longText("adresse");
+            $table->date("date");
+            
         });
     }
 
