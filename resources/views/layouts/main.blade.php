@@ -76,7 +76,7 @@
         
                 <div class="mt-24"></div>
                 <x-sidebar-title>Zone de tests</x-sidebar-title>
-                <x-sidebar-link href="/chantiers">Chantiers</x-sidebar-link>
+                <x-sidebar-link href="/random_user/chantiers">Chantiers</x-sidebar-link>
             </div>
         </div>
 

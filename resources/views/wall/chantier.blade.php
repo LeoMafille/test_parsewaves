@@ -7,7 +7,7 @@
         {{-- @php $i=0 @endphp --}}
         @foreach($chantiers as $chantier)
             {{--@php $i+=1 @endphp --}}
-            <x-sidebar-link href="/chantiers/{{$chantier->id}}">Chantier {{$chantier->id}}</x-sidebar-link>
+            <x-sidebar-link href="/random_user/chantiers/{{$chantier->id}}">Chantier {{$chantier->id}}</x-sidebar-link>
          @endforeach
     </div>
 

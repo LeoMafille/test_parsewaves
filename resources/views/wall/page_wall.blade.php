@@ -2,6 +2,7 @@
 @extends('wall.mesure')
 
 @section('mur')
+{{--    <p>Nom du chantier : {{ $currentChantier->adresse }}</p> --}}
 @php 
    
     $wallFragments = $currentMeasure->wall_parts;
