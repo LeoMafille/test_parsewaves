@@ -1,26 +1,22 @@
 @extends('layouts.app')
 
 @section('body')
-    <div class="h-20 bg-slate-50 relative flex">
+    <div class="h-20 bg-[#fbfbfe] relative flex">
         <div class="absolute">
             <a href="/"><img class="ml-6 mt-6 h-8" src="{{ asset('images/izFYhZoABtG6SWF4Y5zFUtKHck.webp') }}" alt="Parsewaves Logo"></a>
         </div>
         
         <span class="h-full flex ml-auto relative text-gray-500 group">
-            <div class="flex p-2 space-x-2 items-center text-balance font-medium border-r-2 px-8 mr-3 text-xl tracking-wider z-10">
-                <a href="/faq">FAQ</a>
-            </div>
-            
-            <div class="absolute top-0 w-full min-h-20 opacity-0 group-hover:opacity-100 p-2 bg-[#f8fafc] duration-200 z-0">
+            <div class="absolute top-0 w-full min-h-20 opacity-0 group-hover:opacity-100 p-2 bg-[#fbfbfe] duration-200 z-0">
                     <ul class="mt-20">
                         <li class="p-2 text-center">
-                            <a class="rounded-full bg-red-500 hover:bg-red-300 text-white font-bold py-2 px-4" href="/user/{{ Auth::user()->name }}">Accéder à mon profil</a>
+                            <a class="rounded-xl hover:bg-[#dedcff] hover:shadow-md py-2 px-4" href="/user/{{ Auth::user()->name }}">Accéder à mon profil</a>
                         </li>
                         <li class="p-2 text-center">
                             <div>
                                 <form action="/logout" method="post">
                                     @csrf
-                                    <button type="submit" class="rounded-full bg-red-500 hover:bg-red-300 text-white font-bold py-2 px-4">Déconnexion</button>
+                                    <button type="submit" class="shadow-md rounded-xl bg-[#2c286d] hover:bg-[#dedcff] text-white font-bold py-2 px-4">Déconnexion</button>
                                 </form>
                             </div>
                         </li>
@@ -51,9 +47,9 @@
     </div>
 
     <div class="flex flex-1">
-        <div class="max-w-64 bg-slate-50 grow">
+        <div class="max-w-64 bg-[#ffffff] grow">
             <div class="-ml-2">
-                <x-sidebar-link icon_class="fa fa-bar-chart" href="#">Dashboard</x-sidebar-link>
+                <x-sidebar-link icon_class="fa fa-bar-chart" href="/dashboard">Tableau de bord</x-sidebar-link>
                 <x-sidebar-title>Navigation</x-sidebar-title>
                 
                 @if (auth()->user()->role_id == 1)
@@ -92,11 +88,12 @@
                 <div class="mt-24"></div>
                 <x-sidebar-title>Zone de tests</x-sidebar-title>
                 <x-sidebar-link href="/random_user/chantiers">Chantiers</x-sidebar-link>
+                <x-sidebar-link href="/qna">FAQ</x-sidebar-link>
             </div>
         </div>
 
         <div class="flex flex-col flex-1">
-            <div class="h-4 bg-red-400"></div>
+            <div class="h-4 bg-[#2c286d] shadow-md"></div>
             <div class="flex-1 p-4">
                 @yield('content')
             </div>

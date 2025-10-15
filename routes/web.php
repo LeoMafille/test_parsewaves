@@ -15,6 +15,12 @@ Route::middleware('auth')->group(function () {
         return view('admin.index');
     });
 
+    Route::get('/dashboard', function() {
+        return (view('dashboard', [
+            'users' => User::count(),
+        ]));
+    });
+
     Route::get('/logs', function() {
         return view('logs.index');
     });
@@ -25,7 +31,7 @@ Route::middleware('auth')->group(function () {
         ]);
     });
 
-    Route::get('/faq', function() {
+    Route::get('/qna', function() {
         return view('faq');
     });
 

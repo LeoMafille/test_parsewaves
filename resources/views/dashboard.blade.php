@@ -1,17 +1,42 @@
-<x-app-layout>
-    <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
-            {{ __('Dashboard') }}
-        </h2>
-    </x-slot>
+@extends('layouts.main')
 
-    <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
-                <div class="p-6 text-gray-900 dark:text-gray-100">
-                    {{ __("You're logged in!") }}
-                </div>
-            </div>
-        </div>
-    </div>
-</x-app-layout>
+@section('content')
+    <div class="flex flex-wrap gap-10">
+        <article class="flex-1 min-w-[300px] bg-white  rounded-lg shadow-md p-4">
+            <span class="flex">
+                <p>Nombre d'entreprises:</p> 
+                <p class="text-xl ml-auto mr-2">N/A</p>
+            </span>
+            
+        </article>
+
+        <article class="flex-1 min-w-[300px] bg-white  rounded-lg shadow-md p-4">
+            <span class="flex">
+                <p>Nombre d'utilisateurs:</p> 
+                <p class="text-xl ml-auto mr-2">{{ $users }}</p>
+            </span>
+        </article>
+        
+        <article class="flex-1 min-w-[300px] bg-white  rounded-lg shadow-md p-4">
+            <span class="flex">
+                <p>Nombre d'outils:</p> 
+                <p class="text-xl ml-auto mr-2">N/A</p>
+            </span>
+        </article>
+        
+        <article class="flex-1 min-w-[300px] bg-white  rounded-lg shadow-md p-4">
+            <span class="flex">
+                <p>Recettes du mois:</p> 
+                <p class="text-xl ml-auto mr-2">N/A</p>
+            </span>
+        </article>
+
+        <article class="flex-1 min-w-[300px] bg-white  rounded-lg shadow-md p-4">
+            <span class="flex">
+                <p>Mesures prises dans le mois:</p> 
+                <p class="text-xl ml-auto mr-2">N/A</p>
+            </span>
+        </article>
+        
+    </div>    
+@endsection

@@ -7,7 +7,7 @@
 {{ $chantiers->links() }}
 <div id="Table" class ="h-full  w-full ">
     {{-- La vous avez les en-tête --}}
-    <div class="grid grid-cols-4 p-2 text-center border-2 border-black w-full">
+    <div class="grid grid-cols-4 p-2 text-center bg-[#2c286d] text-white w-full">
         <div>Lieux</div>
         <div>Date</div>
         <div>Nombre de scan</div>
@@ -15,23 +15,23 @@
 
     </div>
     @foreach ( $chantiers as $chantier)
-        <div class="grid grid-cols-4 p-2 border-2 border-black text-center flex justify-center items-center w-full">
+        <div class="grid grid-cols-4 p-2 border-2 border-black border-opacity-25 text-center flex justify-center items-center w-full">
             @php
             $measures = $chantier->measures; 
             @endphp
-            <div class="text-center ">{{$chantier->adresse}}</div>
+            <div class="text-justify ">{{$chantier->adresse}}</div>
             <div class="text-center ">{{$chantier->date}}</div>
             <div class="text-center ">{{sizeof($measures)}}</div>
             <div >
-                <button onclick = "show_Hide(this,{{ $chantier->id }})" class="bg-blue-500 text-white px-4 py-2 rounded-full">Voir Mesures</button>
+                <button onclick = "show_Hide(this,{{ $chantier->id }})" class="shadow-md bg-[#dedcff] px-4 py-2 rounded-xl">Voir Mesures</button>
             </div>
         </div>
         <div id="mesureSup_{{ $chantier->id }}" class ="hidden">
-            <div class=" grid grid-cols-4 p-2 border-2 border-black text-center flex justify-center items-center w-full">
-                <div class="text-center">Epaisseur du mur</div>
-                <div class="text-center">Materiaux</div>
-                <div class="text-center">Representation du mur</div>
-                <div class="text-center">Schema plus précis</div>
+            <div class=" grid grid-cols-4 p-2 border-2 border-black border-opacity-25 text-center flex justify-center items-center w-full">
+                <div class="text-justify">Epaisseur du mur</div>
+                <div class="text-justify">Materiaux</div>
+                <div class="text-justify">Representation du mur</div>
+                <div class="text-justify">Schema plus précis</div>
             </div>
         
                 @foreach ($measures as $mesure ) 
@@ -55,7 +55,7 @@
                                 </div>
                             @endif
                         </div>
-                            {{--<button onclick = "showHide(this)" class="bg-blue-500 text-white px-4 py-2 rounded-full">Voir Mesures</button>--}}
+                            {{--<button onclick = "showHide(this)" class="bg-[#2c286d] text-white px-4 py-2 rounded-full">Voir Mesures</button>--}}
                             <div class="my-auto">
                                 <x-sidebar-link href="/random_user/chantiers/{{ $chantier->id  }}/{{ $mesure->id }}">Details</x-sidebar-link>
                             </div>

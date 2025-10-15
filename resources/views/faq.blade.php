@@ -5,7 +5,7 @@
     <div class="text-center">
         <h1 class="font-semibold text-5xl mt-4 mb-10">FAQ</h1>
         <div class="mt-8">
-            <h1 class="flex font-bold bg-slate-300 h-8 items-center justify-center">Je suis administrateur de mon entreprise</h1>
+            <h1 class="flex font-bold bg-[#dedcff] h-8 items-center justify-center shadow-md">Je suis administrateur de mon entreprise</h1>
             
             <h2 class="font-semibold mt-12 text-lg">Mon entreprise a récemment changé de statut, comment pourrais-je modifier le numéro de SIRET?</h2>
             <p class="mt-4">Pour modifier le numéro de SIRET de votre entreprise sur le site, vous devez contacter Parsewaves<br> 
@@ -18,7 +18,7 @@
             </p>
         </div>
         <div class="mt-8">
-            <h1 class="flex font-bold bg-slate-300 h-8 items-center justify-center">Je suis un utilisateur</h1>
+            <h1 class="flex font-bold bg-[#dedcff] h-8 items-center justify-center shadow-md">Je suis un utilisateur</h1>
             
             <h2 class="font-semibold mt-12 text-lg">Je souhaite modifier mes informations, comment faire?</h2>
             <p class="mt-4">Pour modifier votre profil utilisateur, <span class="font-semibold">dirigez-vous en haut à droite de votre écran </span>, puis cliquez sur <span class="font-semibold">Accéder à mon profil"</span>.<br>
