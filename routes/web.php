@@ -25,6 +25,10 @@ Route::middleware('auth')->group(function () {
         ]);
     });
 
+    Route::get('/faq', function() {
+        return view('faq');
+    });
+
     Route::get('/outils', function() {
         return view('outils.index');
     });
