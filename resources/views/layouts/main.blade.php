@@ -3,7 +3,7 @@
 @section('body')
     <div class="h-20 bg-slate-50 relative flex">
         <div class="absolute">
-            <img class="ml-6 mt-6 h-8" src="{{ asset('images/izFYhZoABtG6SWF4Y5zFUtKHck.webp') }}" alt="Parsewaves Logo">
+            <a href="/"><img class="ml-6 mt-6 h-8" src="{{ asset('images/izFYhZoABtG6SWF4Y5zFUtKHck.webp') }}" alt="Parsewaves Logo"></a>
         </div>
         
         <span class="h-full flex ml-auto relative text-gray-500 group">
